@@ -1,0 +1,264 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::selection{
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+}
+
+:root{
+    font-size: 10px;
+    color: #000;
+}
+body{
+    font-family: 'Roboto Slab', serif;
+    background-color: #F5F5F5;
+}
+
+
+
+
+h2{
+    text-align: center;
+    margin: 35px 0 35px 0;
+    font-size: 2.4rem;
+}
+.container{
+    max-width: 1140px;
+    margin: auto;
+}
+section{
+    height: 70vh;
+}
+/* Navigation */
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    padding: 15px 0 15px 0;
+    font-size: 1.4rem;
+    height: 75.4px;
+    
+}
+
+.nav-menu{
+    
+    padding: 15px 0 15px 0;
+}
+
+.nav-menu ul{
+    display: flex;
+}
+
+.nav-menu ul li{
+    list-style: none;
+    margin-right: 20px;
+}
+.nav-menu ul li a{
+    text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  
+  
+}
+.nav-menu ul li a::after{
+    content: '';
+    display: block;
+    background-color: #333399;
+    width: 100%;
+    height: 2px;
+    margin-top: 4px;
+}
+.nav-menu ul li a:hover::after{
+    width: 30%;
+    transition: width 0.8s;
+}
+
+.nav-menu ul li:last-child{
+    margin-right: 0px;
+}
+
+
+
+/* Header-Information */
+
+.header-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    flex-direction: column;
+    background: linear-gradient(-70deg, #ff00cc, #333399);
+    color: white;
+}
+.header-info h2{
+    font-size:5rem;
+}
+
+.header-info h3{
+    font-size: 2.4rem;
+    margin-top: 20px;
+}
+
+.header-info .social-header ul{
+    display: flex;
+    margin-top: 40px;
+    }
+
+.header-info .social-header li{
+    list-style: none;
+    margin-right: 24px;
+    font-size: 22px;
+    cursor: pointer;
+    }
+.header-info .social-header li:last-child{
+    margin-right: 0px;
+
+    }
+
+
+
+/* SERVICES GRID */
+.services{
+    height: 70vh;
+}
+.service-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1.4rem;
+    text-align: center;
+    color: #333399;
+    
+}
+
+.grid-1,.grid-2,.grid-3{
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    align-items: center;
+    justify-content: center;
+    border:2px solid #CDCDCD;
+    padding: 25px;
+}
+.service-grid h3{
+    font-size: 2.4rem;
+    margin-top: 22px;
+}
+
+.service-grid p{
+    font-size: 1.9rem;
+    margin-top: 22px;
+}
+
+.service-grid i{
+    font-size: 4rem;
+    color:#ff00cc
+}
+
+
+/* PORTFOLIO GRID */
+
+.portfolio-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1.4rem;
+    overflow: hidden;
+}
+
+
+
+.portfolio-grid img{
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 1s ;
+}
+
+.portfolio-grid img:hover{
+    transform: scale(1.08);
+
+ 
+}
+
+
+.portfolio-grid .grid-a,.portfolio-grid .grid-c,.portfolio-grid .grid-d,.portfolio-grid .grid-e{
+    height: 400px;
+    width: 100%;
+    
+    justify-self: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(-70deg, #ff00cc, #333399);
+    z-index: 2;
+    top: 0;
+    /* left: -100%; */
+    opacity: 0.45;
+    cursor: pointer;
+    transition: all 0.6s;
+}
+.overlay-link{
+    font-size: 2.4rem;
+    color: white;
+    /* border: 3px solid #F5F5F5; */
+    position: absolute;
+    z-index: 3;
+    left:-150%;
+    bottom:0%;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    padding: 10px 20px 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    width: 100%;
+}
+
+.portfolio-grid .grid-a:hover .overlay-link{
+left: 0%;
+background-color:rgba(0,0,0,0.6);
+}
+.portfolio-grid .grid-b:hover .overlay-link{
+    left: 0%;
+    background-color:rgba(0,0,0,0.6);
+}
+.portfolio-grid .grid-c:hover .overlay-link{
+    left: 0%;
+    background-color:rgba(0,0,0,0.6);
+}
+.portfolio-grid .grid-d:hover .overlay-link{
+    left: 0%;
+    background-color:rgba(0,0,0,0.6);
+}
+.portfolio-grid .grid-e:hover .overlay-link{
+    left: 0%;
+    background-color:rgba(0,0,0,0.6);
+}
+
+
+
+.portfolio-grid .grid-b{
+    height: 400px;
+    width: 100%;
+    
+    justify-self: center;
+    grid-column-start: 2;
+  grid-column-end: 4;
+  overflow: hidden;
+position: relative;
+}
