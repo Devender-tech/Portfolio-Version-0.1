@@ -35,7 +35,7 @@ h2{
 
 header{
     position: relative;
-    height: 10vh;
+    /* height: 10vh; */
 }
 
 .nav{
@@ -48,6 +48,7 @@ header{
     height: 75.4px;
     
 }
+
 
 .nav-menu{
     
