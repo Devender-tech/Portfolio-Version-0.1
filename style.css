@@ -93,6 +93,8 @@ header{
     align-items: center;
     justify-content: start;
     height: 10vh;
+    position: absolute;
+    z-index: 3;
 }
 .menu-toggle{
     font-size: 4rem;
@@ -101,6 +103,7 @@ header{
     vertical-align: middle;
     display: none;
     padding: 10px;
+    color: white;
 }
 
 .mobile-menu{
