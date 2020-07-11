@@ -90,6 +90,7 @@ header{
     right: 20px;
     top: 10px;
     vertical-align: middle;
+    display:none;
 
 }
 
@@ -311,6 +312,12 @@ position: relative;
     header .nav{
         display: none;
     }
+    
+    .menu-toggle{
+ 
+    display:block;
+
+}
     .service-grid{
         display: grid;
         grid-template-columns: 1fr;
