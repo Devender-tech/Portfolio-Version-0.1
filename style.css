@@ -87,6 +87,12 @@ header{
     margin-right: 0px;
 }
 
+
+.menu-toggle-flex{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
 .menu-toggle{
     font-size: 4rem;
     right: 20px;
