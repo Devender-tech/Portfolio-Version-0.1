@@ -14,17 +14,26 @@
     color: #000;
 }
 body{
-    font-family: 'Roboto Slab', serif;
-    background-color: #F5F5F5;
+    font-family: 'Poppins', sans-serif;
+    background-color: #FFF;
 }
-
-
 
 
 h2{
     text-align: center;
     margin: 35px 0 35px 0;
     font-size: 2.4rem;
+    letter-spacing: 2px;
+    font-weight: 300;
+}
+
+h2::after{
+    display: block;
+    content: '';
+    border-bottom: 2px solid #333399;
+    width: 10%;
+    margin:10px auto auto auto;
+
 }
 .container{
     max-width: 1140px;
@@ -154,13 +163,18 @@ header{
     background: linear-gradient(-70deg, #ff00cc, #333399);
     color: white;
 }
-.header-info h2{
-    font-size:5rem;
+.header-info h1{
+    font-size:3.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    font-weight: 300;
 }
 
 .header-info h3{
     font-size: 2.4rem;
     margin-top: 20px;
+    font-weight: 300;
+    letter-spacing: 1.5px;
 }
 
 .header-info .social-header ul{
@@ -318,6 +332,105 @@ background-color:rgba(0,0,0,0.6);
   overflow: hidden;
 position: relative;
 }
+
+/* FORM GRID */
+
+.form-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1.4rem;
+}
+
+.form-grid label{
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.form-grid input{
+    width: 100%;
+    padding: 12px 5px 12px 5px;
+}
+
+#contactme form .message{
+    margin-top: 15px;
+}
+
+#contactme form .message label{
+display: block;
+margin-bottom: 5px;
+font-size: 1.2rem;
+font-weight: 500;
+}
+
+#contactme form .message input{
+    width: 100%;
+    padding: 20px 5px 20px 5px;
+    }
+
+input[type=submit]{
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #333333;
+    color: white;
+}
+
+input[type=text],input[type=email],input[type=number]{
+    border: 1.9px solid #333399;
+    color: white;
+}
+
+input[type=text]:focus, input[type=email]:focus,input[type=number]:focus{
+    background-color: #9349cc;
+}
+
+
+
+
+
+/* footer */
+
+
+footer{
+    height: 10vh;
+    background-color: #333;
+    margin-top: 35px !important;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+footer p{
+    height: 10vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 2px;
+    font-size: 1.4rem;
+}
+
+footer .social-header ul{
+    display: flex;
+    margin-top: 40px;
+    align-items: center;
+    justify-content: center;
+    height: 0vh;
+    }
+
+footer .social-header li{
+    list-style: none;
+    margin-right: 24px;
+    font-size: 22px;
+    cursor: pointer;
+    color: white;
+    }
+footer .social-header li:last-child{
+    margin-right: 0px;
+
+    }
 
 
 @media only screen and (max-width:500px){
