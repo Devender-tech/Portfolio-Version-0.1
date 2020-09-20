@@ -3,11 +3,28 @@ document.querySelector('.menu-toggle').addEventListener('click',function(){
 document.querySelector('.mobile-menu').classList.toggle("active");
 });
 
-window.onscroll = function() {myFunction()};
+// Smooth Scrolling
+$('.nav a').on('click', function(event) {
+  if (this.hash !== '') {
+    event.preventDefault();
 
-function myFunction() {
-  if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50)
-    document.getElementsByTagName("header").classList.toggle('active');
- 
-  
-}
+    const hash = this.hash;
+
+    $('html, body').animate(
+      {
+        scrollTop: $(hash).offset().top - 10
+      },
+      800
+    );
+  }
+});
+
+
+$("form").submit(function(){
+  alert("Submitted");
+});
+
+// setTimeout(function()
+// { 
+//      window.location = "index.html"; 
+// }, 2000);
